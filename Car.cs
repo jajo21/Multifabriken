@@ -1,8 +1,9 @@
 using System;
+using System.Collections.Generic;
 
 namespace multifabriken_jajo21
 {
-    class Car : Order
+    class Car
     {
         protected string licensePlateLetters, color, carBrand;
         protected int licensePlateNumber;
@@ -26,8 +27,8 @@ namespace multifabriken_jajo21
             Console.ReadKey();
             Console.Clear();
         }
-        public override void GetOrderString() {
-            Console.WriteLine($"Bil | Registreringsnummer: {licensePlateLetters} {licensePlateNumber}, Bilmärke: {carBrand}, Färg: {color}\n");
+        public string GetCarString() {
+            return ($"Registreringsnummer: {licensePlateLetters} {licensePlateNumber}, Bilmärke: {carBrand}, Färg: {color}");
         }
     }
 }

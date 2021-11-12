@@ -2,7 +2,7 @@ using System;
 
 namespace multifabriken_jajo21
 {
-    class Tofu : Order
+    class Tofu 
     {
         protected string flavour;
         protected int volume;
@@ -21,8 +21,8 @@ namespace multifabriken_jajo21
             Console.Clear(); 
         }
 
-        public override void GetOrderString(){
-            Console.WriteLine($"Tofu | Smak: {flavour}, Liter: {volume}\n");
+        public string GetTofuString(){
+            return ($"Smak: {flavour}, Liter: {volume}"); 
         }
     }
 }

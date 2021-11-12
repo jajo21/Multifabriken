@@ -2,8 +2,7 @@ using System;
 
 namespace multifabriken_jajo21
 {
-    class Candy : Order
-    {
+    class Candy {
         protected string flavour;
         protected int quantity;
 
@@ -20,8 +19,8 @@ namespace multifabriken_jajo21
             Console.ReadKey();
             Console.Clear();
         }
-        public override void GetOrderString() {
-            Console.WriteLine($"Godis | {flavour}, Antal: {quantity}\n");
+        public string GetCandyString() {
+            return ($"Smak: {flavour}, Antal: {quantity}"); 
         }
     }
 }
