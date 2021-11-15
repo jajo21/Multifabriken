@@ -80,7 +80,18 @@ namespace multifabriken_jajo21 {
             Console.Write ("\nSkriv in tre bokstäver till bilens registreringsnummer: ");
             string licensePlateLetters = Console.ReadLine ();
             Console.Write ("Skriv in tre siffror till bilens registreringsnummer: ");
-            int licensePlateNumber = Convert.ToInt32 (Console.ReadLine ());
+            int licensePlateNumber;
+
+            while (true) { //Kolla att det är siffror som skrivs
+                try {
+                    licensePlateNumber = Convert.ToInt32 (Console.ReadLine ());
+                    break;
+                } catch {
+                    Console.WriteLine ("\nFelaktigt val. Testa igen!\nDu kan bara mata in siffror!");
+                    Console.Write ("\nSkriv här: ");
+                }
+            }
+
             Console.WriteLine ($"Bilens registreringsnummer kommer att bli: {licensePlateLetters} {licensePlateNumber}\n");
             Console.Write ("Skriv in vilken färg du önskar ha på bilen: ");
             string color = Console.ReadLine ();
@@ -104,7 +115,17 @@ namespace multifabriken_jajo21 {
             Console.Write ("\nVänligen ange vilken smak du vill ha på ditt godis: ");
             string flavour = Console.ReadLine ();
             Console.Write ("Vänligen ange antalet godisar du vill ha: ");
-            int quantity = Convert.ToInt32 (Console.ReadLine ());
+            int quantity;
+
+            while (true) { //Kolla att det är siffror som skrivs
+                try {
+                    quantity = Convert.ToInt32 (Console.ReadLine ());
+                    break;
+                } catch {
+                    Console.WriteLine ("\nFelaktigt val. Testa igen!\nDu kan bara mata in siffror!");
+                    Console.Write ("\nSkriv här: ");
+                }
+            }
 
             Candy newCandy = new Candy (flavour, quantity);
             candyList.Add (newCandy);
@@ -123,7 +144,17 @@ namespace multifabriken_jajo21 {
             Console.Write ("\nSkriv in vilken färg du vill ha på ditt snöre: ");
             string color = Console.ReadLine ();
             Console.Write ("Skriv in vilken längd i centimeter du vill ha på ditt snöre: ");
-            int length = Convert.ToInt32 (Console.ReadLine ());
+            int length;
+
+            while (true) { //Kolla att det är siffror som skrivs
+                try {
+                    length = Convert.ToInt32 (Console.ReadLine ());
+                    break;
+                } catch {
+                    Console.WriteLine ("\nFelaktigt val. Testa igen!\nDu kan bara mata in siffror!");
+                    Console.Write ("\nSkriv här: ");
+                }
+            }
 
             Lace newLace = new Lace (color, length);
             laceList.Add (newLace);
@@ -136,21 +167,31 @@ namespace multifabriken_jajo21 {
 
         private void AddNewTofu () {
             Console.Clear ();
-            Console.WriteLine("Välkommen till Multifabrikens tofubeställning!");
-            Console.WriteLine("Vänligen svara på kommande frågor för att beställa din tofu.");
+            Console.WriteLine ("Välkommen till Multifabrikens tofubeställning!");
+            Console.WriteLine ("Vänligen svara på kommande frågor för att beställa din tofu.");
 
-            Console.Write("\nVänligen ange vilken kryddning du vill ha på din Tofu: ");
-            string flavour = Console.ReadLine();
-            Console.Write("Vänligen ange hur många liter Tofu du vill ha: ");
-            int volume = Convert.ToInt32(Console.ReadLine());
+            Console.Write ("\nVänligen ange vilken kryddning du vill ha på din Tofu: ");
+            string flavour = Console.ReadLine ();
+            Console.Write ("Vänligen ange hur många liter Tofu du vill ha: ");
+            int volume;
+
+            while (true) { //Kolla att det är siffror som skrivs
+                try {
+                    volume = Convert.ToInt32 (Console.ReadLine ());
+                    break;
+                } catch {
+                    Console.WriteLine ("\nFelaktigt val. Testa igen!\nDu kan bara mata in siffror!");
+                    Console.Write ("\nSkriv här: ");
+                }
+            }
 
             Tofu newTofu = new Tofu (flavour, volume);
             tofuList.Add (newTofu);
 
-            Console.WriteLine($"\nVad kul, du har nu beställt Tofu!\nKryddning: {flavour} \nMängd: {volume} Liter");
-            Console.WriteLine("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
-            Console.ReadKey();
-            Console.Clear();
+            Console.WriteLine ($"\nVad kul, du har nu beställt Tofu!\nKryddning: {flavour} \nMängd: {volume} Liter");
+            Console.WriteLine ("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
+            Console.ReadKey ();
+            Console.Clear ();
         }
 
         private void GetOrderList () {
