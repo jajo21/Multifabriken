@@ -7,22 +7,22 @@ namespace multifabriken_jajo21 {
         private List<Candy> candyList;
         private List<Lace> laceList;
         private List<Tofu> tofuList;
-        public Menu () {
+        public Menu () { // Konstruktor för listorna
             carList = new List<Car> ();
             candyList = new List<Candy> ();
             laceList = new List<Lace> ();
             tofuList = new List<Tofu> ();
         }
-        public void RunMenu () {
+        public void RunMenu () { // Metod som kör hela programmet.
             {
                 Console.Clear ();
                 int menuChoice;
 
                 while (true) {
 
-                    PrintMenu (); // Skriver ut menynsträngen där användaren kan se de olika valen.
+                    PrintMenu (); // Skriver ut huvudmenyn där användaren kan se de olika valen.
 
-                    while (true) { //Kolla att ett nummer mellan 0-5 skrivs in annars försök igen.
+                    while (true) { // Kolla att ett nummer mellan 0-5 skrivs in annars försök igen.
                         try {
                             menuChoice = Convert.ToInt32 (Console.ReadLine ());
                             if (menuChoice <= 5 && menuChoice >= 0)
@@ -32,8 +32,8 @@ namespace multifabriken_jajo21 {
                             Console.Write ("\nSkriv här: ");
                         }
                     }
-
-                    switch (menuChoice) {
+                    
+                    switch (menuChoice) { // Kontrollerar vilket knapptryck användaren gör och går in på vald metod.
                         case 1:
                             AddNewCar ();
                             break;
@@ -55,7 +55,7 @@ namespace multifabriken_jajo21 {
                 }
             }
         }
-        private void PrintMenu () {
+        private void PrintMenu () { // Metod som skriver ut huvudmenyn som är synlig för användaren
             Console.WriteLine ("Hej och Välkommen till Multifabriken!\n" +
                 "Här kan du beställa de bästa produkterna i stan.\n" +
                 "Välj och vraka mellan bilar, godis, snören och tofu!\n" +
@@ -71,7 +71,7 @@ namespace multifabriken_jajo21 {
             Console.Write ("Skriv här: ");
         }
 
-        private void AddNewCar () {
+        private void AddNewCar () { // Metod som lägger till en ny bil i billistan beroende på användarens val.
             Console.Clear ();
             Console.WriteLine ("Välkommen till Multifabrikens bilbeställning!");
             Console.WriteLine ("Vänligen svara på kommande frågor för att beställa din bil.");
@@ -82,7 +82,7 @@ namespace multifabriken_jajo21 {
             Console.Write ("Skriv in tre siffror till bilens registreringsnummer: ");
             int licensePlateNumber;
 
-            while (true) { //Kolla att det är siffror som skrivs
+            while (true) { // Kolla att det är siffror som skrivs
                 try {
                     licensePlateNumber = Convert.ToInt32 (Console.ReadLine ());
                     break;
@@ -98,8 +98,8 @@ namespace multifabriken_jajo21 {
             Console.Write ("Skriv in vilket bilmärke du önskar: ");
             string carBrand = Console.ReadLine ();
 
-            Car newCar = new Car (licensePlateLetters, color, carBrand, licensePlateNumber);
-            carList.Add (newCar);
+            Car newCar = new Car (licensePlateLetters, color, carBrand, licensePlateNumber); // Skapar ett nytt objekt av klassen Car
+            carList.Add (newCar);  // Lägger till det nyskapade objektet i rätt lista
 
             Console.WriteLine ($"\nDu har beställt följande bil: \nRegistreringsnummer: {licensePlateLetters} {licensePlateNumber} \nBilmärke: {carBrand} \nFärg: {color}");
             Console.WriteLine ("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
@@ -107,7 +107,7 @@ namespace multifabriken_jajo21 {
             Console.Clear ();
         }
 
-        private void AddNewCandy () {
+        private void AddNewCandy () {  // Metod som lägger till en ny godis i godislistan beroende på användarens val.
             Console.Clear ();
             Console.WriteLine ("Välkommen till Multifabrikens godisbeställning!");
             Console.WriteLine ("Vänligen svara på kommande frågor för att beställa ditt godis.");
@@ -117,7 +117,7 @@ namespace multifabriken_jajo21 {
             Console.Write ("Vänligen ange antalet godisar du vill ha: ");
             int quantity;
 
-            while (true) { //Kolla att det är siffror som skrivs
+            while (true) { // Kolla att det är siffror som skrivs
                 try {
                     quantity = Convert.ToInt32 (Console.ReadLine ());
                     break;
@@ -127,8 +127,8 @@ namespace multifabriken_jajo21 {
                 }
             }
 
-            Candy newCandy = new Candy (flavour, quantity);
-            candyList.Add (newCandy);
+            Candy newCandy = new Candy (flavour, quantity); // Skapar ett nytt objekt av klassen Candy
+            candyList.Add (newCandy); // Lägger till det nyskapade objektet i rätt lista
 
             Console.WriteLine ($"\nDu har beställt följande godis: {flavour} \nAntal: {quantity}");
             Console.WriteLine ("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
@@ -136,7 +136,7 @@ namespace multifabriken_jajo21 {
             Console.Clear ();
         }
 
-        private void AddNewLace () {
+        private void AddNewLace () { // Metod som lägger till ett nytt snöre i snöreslistan beroende på användarens val.
             Console.Clear ();
             Console.WriteLine ("Välkommen till Multifabrikens snöresbeställning!");
             Console.WriteLine ("Vänligen svara på kommande frågor för att beställa ditt snöre.");
@@ -146,7 +146,7 @@ namespace multifabriken_jajo21 {
             Console.Write ("Skriv in vilken längd i centimeter du vill ha på ditt snöre: ");
             int length;
 
-            while (true) { //Kolla att det är siffror som skrivs
+            while (true) { // Kolla att det är siffror som skrivs
                 try {
                     length = Convert.ToInt32 (Console.ReadLine ());
                     break;
@@ -156,8 +156,8 @@ namespace multifabriken_jajo21 {
                 }
             }
 
-            Lace newLace = new Lace (color, length);
-            laceList.Add (newLace);
+            Lace newLace = new Lace (color, length); // Skapar ett nytt objekt av klassen Lace
+            laceList.Add (newLace); // Lägger till det nyskapade objektet i rätt lista
 
             Console.WriteLine ($"\nVad kul, du har beställt ett snöre!\nFärg: {color} \nLängd: {length} cm");
             Console.WriteLine ("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
@@ -165,7 +165,7 @@ namespace multifabriken_jajo21 {
             Console.Clear ();
         }
 
-        private void AddNewTofu () {
+        private void AddNewTofu () { // Metod som lägger till ny tofu i tofulistan beroende på användarens val.
             Console.Clear ();
             Console.WriteLine ("Välkommen till Multifabrikens tofubeställning!");
             Console.WriteLine ("Vänligen svara på kommande frågor för att beställa din tofu.");
@@ -175,7 +175,7 @@ namespace multifabriken_jajo21 {
             Console.Write ("Vänligen ange hur många liter Tofu du vill ha: ");
             int volume;
 
-            while (true) { //Kolla att det är siffror som skrivs
+            while (true) { // Kolla att det är siffror som skrivs
                 try {
                     volume = Convert.ToInt32 (Console.ReadLine ());
                     break;
@@ -185,8 +185,8 @@ namespace multifabriken_jajo21 {
                 }
             }
 
-            Tofu newTofu = new Tofu (flavour, volume);
-            tofuList.Add (newTofu);
+            Tofu newTofu = new Tofu (flavour, volume); // Skapar ett nytt objekt av klassen Tofu
+            tofuList.Add (newTofu); // Lägger till det nyskapade objektet i rätt lista
 
             Console.WriteLine ($"\nVad kul, du har nu beställt Tofu!\nKryddning: {flavour} \nMängd: {volume} Liter");
             Console.WriteLine ("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
@@ -194,12 +194,12 @@ namespace multifabriken_jajo21 {
             Console.Clear ();
         }
 
-        private void GetOrderList () {
+        private void GetOrderList () { // Hämta användarens input från respektive lista och skriv ut.
             Console.Clear ();
             Console.WriteLine ("Välkommen till Multifabrikens ordersida!");
             Console.WriteLine ("Här kan du se vilka produkter du har beställt:");
 
-            //Utskrift för alla bilar
+            // Utskrift för alla bilar
             Console.WriteLine ("\nBilar: ");
             if (carList.Count == 0) {
                 Console.WriteLine ("Inga bilar beställda");
@@ -221,7 +221,7 @@ namespace multifabriken_jajo21 {
                 }
             }
 
-            //Utskrift för alla snören
+            // Utskrift för alla snören
             Console.WriteLine ("\nSnöre: ");
             if (laceList.Count == 0) {
                 Console.WriteLine ("Inget snöre beställt");
@@ -232,7 +232,7 @@ namespace multifabriken_jajo21 {
                 }
             }
 
-            //Utskrift för all Tofu
+            // Utskrift för all Tofu
             Console.WriteLine ("\nTofu: ");
             if (tofuList.Count == 0) {
                 Console.WriteLine ("Ingen tofu beställd");
