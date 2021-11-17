@@ -6,8 +6,8 @@ namespace multifabriken_jajo21
     {
         static void Main(string[] args)
         {
-            Menu multiMenu = new Menu();
-            multiMenu.RunMenu();
+            Menu multifabriken = new Menu();
+            multifabriken.RunMenu();
         }
     }
 }
