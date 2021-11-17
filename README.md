@@ -8,6 +8,7 @@
 ## Instruktioner
 
 *Vad behöver göras för att ditt program ska starta och gå och använda?*
+**Navigera till rätt mapp och skriv dotnet run**
 
 ## Självskattning
 >**OBS:** Byt ut dina egna uppdateringar från *kurisiv text* till **fetmarkerad**.
