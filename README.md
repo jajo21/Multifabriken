@@ -8,7 +8,7 @@
 ## Instruktioner
 
 *Vad behöver göras för att ditt program ska starta och gå och använda?*
-**Navigera till rätt mapp och skriv dotnet run**
+**Navigera till rätt mapp och skriv dotnet run i terminalen**
 
 ## Självskattning
 >**OBS:** Byt ut dina egna uppdateringar från *kurisiv text* till **fetmarkerad**.
@@ -29,6 +29,6 @@
 |**9**  |**Ja**| *Om man väljer att lista alla produkter ska alla produkter man beställt hittills skrivas ut med den  - informationen man angett* - **Funktionaliteten för detta skapas i klassen Menu under metoden GetOrderList. GetOrderList kallas på i funktionen RunMenu genom knapptryck 5**|
 |**10** |**Ja**| *Om man väljer att avsluta programmet ska programmet helt enkelt sluta köras* - **Funktionaliteten för detta finns i klassen Menu under metoden RunMenu genom knapptryck 0**|
 |**11** |**Ja**| *Lösningen ska bestå av en "Program.cs" fil, en ".csproj" fil samt en fil för varje extra klass du skapar* - **Kravet uppfyllt**|
-|**12** |*Ja/nej*| *Lösningen ska förutom kod innehålla en fil med namnet "reflections" i formatet md, txt eller pdf*|
-|**13** |*Ja/nej*| *reflections-filen ska en ska innehålla en kort beskrivning av kodens funktioner och struktur*|
-|**14** |*Ja/nej*| *Filen reflections ska också innehålla en egen analys och reflektion över hur du strukturerat din kod genom användandet av metoder och klasser.*|
+|**12** |**Ja**| *Lösningen ska förutom kod innehålla en fil med namnet "reflections" i formatet md, txt eller pdf* - **Kravet uppfyllt, Reflections.pdf**|
+|**13** |**Ja**| *reflections-filen ska en ska innehålla en kort beskrivning av kodens funktioner och struktur* - **Beskrivningen finns i Reflections.pdf under "kodbeskrivning"**|
+|**14** |**Ja**| *Filen reflections ska också innehålla en egen analys och reflektion över hur du strukturerat din kod genom användandet av metoder och klasser.* - **Analysen finns i Reflections.pdf under "Egen analys och reflektion"**|
