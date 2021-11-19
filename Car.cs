@@ -12,7 +12,8 @@ namespace multifabriken_jajo21
         /*--------------------------Konstruktor--------------------------
         Konstruktor som tar in tre string parametrar och en int parameter.
         ----------------------------------------------------------------- */
-        public Car(string licensePlateLetters, string color, string carBrand, int licensePlateNumber) {
+        public Car(string licensePlateLetters, string color, string carBrand, int licensePlateNumber)
+        {
             this.licensePlateLetters = licensePlateLetters;
             this.licensePlateNumber = licensePlateNumber;
             this.color = color;
@@ -21,7 +22,8 @@ namespace multifabriken_jajo21
         /*---------------------------Metod---------------------------
         Metod som returnerar en string med information om ordern.
         ------------------------------------------------------------- */
-        public string GetCarString() {
+        public string GetCarString()
+        {
             return ($"Registreringsnummer: {licensePlateLetters} {licensePlateNumber}, Bilmärke: {carBrand}, Färg: {color}");
         }
     }
