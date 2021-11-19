@@ -12,7 +12,8 @@ namespace multifabriken_jajo21
         /*--------------------------Konstruktor--------------------------
         Konstruktor som tar in en string parameter och en int parameter.
         ----------------------------------------------------------------- */
-        public Lace(string color, int length) {
+        public Lace(string color, int length)
+        {
             this.color = color;
             this.length = length;
         }
@@ -21,7 +22,7 @@ namespace multifabriken_jajo21
         ------------------------------------------------------------- */
         public string GetLaceString()
         {
-            return ($"Färg: {color}, Längd: {length}"); 
+            return ($"Färg: {color}, Längd: {length}");
         }
     }
 }
