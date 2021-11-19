@@ -129,7 +129,7 @@ namespace multifabriken_jajo21
             Candy newCandy = new Candy(flavour, quantity); // Skapar ett nytt objekt av klassen Candy
             candyList.Add(newCandy); // Lägger till det nyskapade objektet i rätt lista
 
-            Console.WriteLine($"\nDu har beställt följande godis: {flavour} \nAntal: {quantity}");
+            Console.WriteLine($"\nDu har beställt följande godis: \nSmak: {flavour} \nAntal: {quantity}");
             Console.WriteLine("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
             Console.ReadKey();
             Console.Clear();
