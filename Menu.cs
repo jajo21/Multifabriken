@@ -16,10 +16,10 @@ namespace multifabriken_jajo21
             laceList = new List<Lace>();
             tofuList = new List<Tofu>();
         }
-        /*-------------------------------Metod-------------------------------
-        Som är grunden till programmet och visar menyn för användaren och kör 
-        dess funktioner. ----------------------------------------------------
-        --------------------------------------------------------------------- */
+        /*----------------------------------Metod----------------------------------
+        RunMenu visar menyn för användaren och anropar programmets metoder beroende
+        på användarens val. -------------------------------------------------------
+        --------------------------------------------------------------------------- */
         public void RunMenu()
         {
             {
@@ -29,11 +29,13 @@ namespace multifabriken_jajo21
                 {
                     PrintMenu(); // Skriver ut huvudmenyn där användaren kan se de olika valen.
 
-                    int menuChoice = ReadLineCheckInteger();/* Deklarerar menuChoice till en metod som tar en 
-                    input från användaren och kontrollerar om det är ett nummer som skrivs, är det ett nummer tillsätter 
-                    den värdet till variabeln, annars får man ett felmeddelande och får försöka igen */
+                    int menuChoice = ReadLineCheckInteger(); /* Deklarerar menuChoice till en metod som tar en 
+                    input från användaren och kontrollerar om det är ett nummer som skrivs, är det ett nummer 
+                    tillsätter den värdet till variabeln, annars får man ett felmeddelande och får försöka igen */
 
-                    switch (menuChoice){ // Kontrollerar vilket knapptryck användaren gör och går in på vald metod.
+                    // Switchen nedanför kontrollerar vilket knapptryck användaren gör och går in på vald metod.
+                    switch (menuChoice)
+                    { 
                         case 1:
                             AddNewCar();
                             break;
@@ -47,14 +49,13 @@ namespace multifabriken_jajo21
                             AddNewTofu();
                             break;
                         case 5:
-                            GetOrderList();
+                            GetOrderLists();
                             break;
                         case 0:
                             return;
                         default:
-                            Console.WriteLine("\nFelaktig inmatning");
-                            Console.WriteLine("Du kan bara mata in siffror mellan 0-5!");
-                            Console.WriteLine("\n---Tryck på valfri tangent för att gå tillbaka till menyn och försöka igen---");
+                            Console.WriteLine("\nFelaktig inmatning! Du kan bara mata in siffror mellan 0-5. Gå gärna tillbaka till menyn och försök igen!");
+                            Console.WriteLine("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
                             Console.ReadKey();
                             Console.Clear();
                             break;
@@ -63,7 +64,7 @@ namespace multifabriken_jajo21
             }
         }
         /*-------------------------------Metod-------------------------------
-        Skriver ut den synliga huvudmenyn för användaren --------------------
+        PrintMenu skriver ut den synliga huvudmenyn för användaren. ---------
         --------------------------------------------------------------------- */
         private void PrintMenu()
         {
@@ -81,10 +82,9 @@ namespace multifabriken_jajo21
             Console.WriteLine("0: Avsluta programmet\n");
             Console.Write("Skriv här: ");
         }
-
-        /*-------------------------------Metod-------------------------------
-        Lägger till en ny bil i billistan beroende på användarens val. ------
-        --------------------------------------------------------------------- */
+        /*---------------------------------Metod---------------------------------
+        AddNewCar lägger till en ny bil i billistan beroende på användarens val.
+        ------------------------------------------------------------------------- */
         private void AddNewCar()
         {
             Console.Clear();
@@ -112,9 +112,9 @@ namespace multifabriken_jajo21
             Console.ReadKey();
             Console.Clear();
         }
-        /*-------------------------------Metod-------------------------------
-        Lägger till en ny godis i godislistan beroende på användarens val. --
-        --------------------------------------------------------------------- */
+        /*------------------------------------Metod------------------------------------
+        AddNewCandy lägger till en ny godis i godislistan beroende på användarens val.
+        ------------------------------------------------------------------------------- */
         private void AddNewCandy()
         {
             Console.Clear();
@@ -134,9 +134,9 @@ namespace multifabriken_jajo21
             Console.ReadKey();
             Console.Clear();
         }
-        /*-------------------------------Metod-------------------------------
-        Lägger till ett nytt snöre i snöreslistan beroende på användarens val.
-        --------------------------------------------------------------------- */
+        /*-------------------------------------Metod-------------------------------------
+        AddNewLace lägger till ett nytt snöre i snöreslistan beroende på användarens val.
+        --------------------------------------------------------------------------------- */
         private void AddNewLace()
         {
             Console.Clear();
@@ -151,14 +151,14 @@ namespace multifabriken_jajo21
             Lace newLace = new Lace(color, length); // Skapar ett nytt objekt av klassen Lace
             laceList.Add(newLace); // Lägger till det nyskapade objektet i rätt lista
 
-            Console.WriteLine($"\nVad kul, du har beställt ett snöre!\nFärg: {color} \nLängd: {length} cm");
+            Console.WriteLine($"\nDu har beställt följande snöre: \nFärg: {color} \nLängd: {length} cm");
             Console.WriteLine("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
             Console.ReadKey();
             Console.Clear();
         }
-        /*-------------------------------Metod-------------------------------
-        Lägger till ny tofu i tofulistan beroende på användarens val.--------
-        --------------------------------------------------------------------- */
+        /*---------------------------------Metod---------------------------------
+        AddNewTofu lägger till ny tofu i tofulistan beroende på användarens val.
+        ------------------------------------------------------------------------- */
         private void AddNewTofu()
         {
             Console.Clear();
@@ -174,16 +174,16 @@ namespace multifabriken_jajo21
             Tofu newTofu = new Tofu(flavour, volume); // Skapar ett nytt objekt av klassen Tofu
             tofuList.Add(newTofu); // Lägger till det nyskapade objektet i rätt lista
 
-            Console.WriteLine($"\nVad kul, du har nu beställt Tofu!\nKryddning: {flavour} \nMängd: {volume} Liter");
+            Console.WriteLine($"\nDu har beställt följande Tofu!\nKryddning: {flavour} \nMängd: {volume} Liter");
             Console.WriteLine("\n---Tryck på valfri tangent för att gå tillbaka till menyn---");
             Console.ReadKey();
             Console.Clear();
         }
-        /*-------------------------------Metod-------------------------------
-        Hämtar användarens input från respektive lista och skriver ut.-------
-        --------------------------------------------------------------------- */
-        private void GetOrderList()
-        { 
+        /*--------------------------------------Metod--------------------------------------
+        GetOrderList hämtar användarens sparade input från respektive lista och skriver ut.
+        ----------------------------------------------------------------------------------- */
+        private void GetOrderLists()
+        {
             Console.Clear();
             Console.WriteLine("Välkommen till Multifabrikens ordersida!");
             Console.WriteLine("Här kan du se vilka produkter du har beställt:");
@@ -251,9 +251,10 @@ namespace multifabriken_jajo21
             Console.ReadKey();
             Console.Clear();
         }
-        /*-------------------------------Metod-------------------------------
-        Läser in input från användaren och returnerar inputen om den inte är tom.
-        --------------------------------------------------------------------- */
+        /*---------------------------------Metod---------------------------------
+        ReadLineCheckString läser in input från användaren och returnerar inputen 
+        om den inte är tom, är den tom får man försöka igen. --------------------
+        ------------------------------------------------------------------------- */
         private string ReadLineCheckString()
         {
             string inputString;
@@ -272,11 +273,12 @@ namespace multifabriken_jajo21
             }
             return inputString;
         }
-        /*-------------------------------Metod-------------------------------
-        Kollar att en input är ett nummer och inte tom, returnerar ett värde 
-        när input är ett nummer och inte är tom.-----------------------------
-        --------------------------------------------------------------------- */
-        private int ReadLineCheckInteger() // Metod som kollar att en input är ett nummer och inte tom, returnerar när input är ett nummer och inte tom.
+        /*-----------------------------------Metod-----------------------------------
+        ReadLineCheckInteger läser in input från användaren och kollar att den är en 
+        siffra och att den inte är tom, returnerar ett värde kraven uppfylls, annars 
+        skickas ett felmeddelande och man får försöka igen.--------------------------
+        ----------------------------------------------------------------------------- */
+        private int ReadLineCheckInteger()
         {
             int number;
             while (true)
@@ -291,7 +293,7 @@ namespace multifabriken_jajo21
                 }
                 catch
                 {
-                    Console.WriteLine("\nFelaktigt val. Testa igen!\nDu kan bara mata in siffror!");
+                    Console.WriteLine("\nFelaktigt inmatning. Du kan bara mata in siffror. Testa igen!");
                     Console.Write("\nSkriv här: ");
                 }
             }
