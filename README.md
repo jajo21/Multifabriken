@@ -1,22 +1,20 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6312085&assignment_repo_type=AssignmentRepo)
 # Multifabriken
-
->Du ska skapa en konsolapplikation där man kan välja att beställa nya produkter från fabriken.
->
->[Gå till uppgiften](https://ju.instructure.com/courses/5951/assignments/22265)
-
 ## Instruktioner
+1. Ladda ner repot från https://github.com/jajo21/inloggningssida
+2. Leta upp valfri terminal och utgå från nerladdad mapp.
+3. Applikationen kräver att du har .NET SDK installerat
+4. För att starta applikationen, skriv ```dotnet run ``` i terminalen.
 
-*Vad behöver göras för att ditt program ska starta och gå och använda?*
-**Kräver .NET SDK**
-**Navigera till rätt mapp och skriv "dotnet run" i terminalen**
+## Syfte - YH-utbildning: Webbutvecklare .NET
+* Inlämningsuppgift i kursen Webbapplikation MVP - September 2021
+* Beskrivning: Inloggningssida med fokus JavaScript och localStorage.
+* Resultat: 100/100 (VG)
 
-## Självskattning
->**OBS:** Byt ut dina egna uppdateringar från *kurisiv text* till **fetmarkerad**.
+## Tekniker
+* HTML
+* Javascript tillsammans med localstorage
 
-*Uppdatera den här listan med vilka krav du uppfyllt och ev. inte blivit klar med eller valt att inte göra, lämna gärna egna kommentarer om lösningen eller*
-
-
+## Kravspecifikation
  |Krav|Uppfyllt|Egna Kommentarer|
  |---|---|---|
 |**1**  |**Ja**| *Lösningen ska bestå av en konsolapplikation skriven i C# som är körbar med .NET Core* - **Kravet uppfyllt**|
