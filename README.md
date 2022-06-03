@@ -1,18 +1,20 @@
 # Multifabriken
-## Instruktioner
-1. Ladda ner repot från https://github.com/jajo21/inloggningssida
+## Instruktioner för användning
+1. Ladda ner repot från https://github.com/jajo21/Multifabriken
 2. Leta upp valfri terminal och utgå från nerladdad mapp.
 3. Applikationen kräver att du har .NET SDK installerat
-4. För att starta applikationen, skriv ```dotnet run ``` i terminalen.
+4. För att starta applikationen, skriv kommandot ```dotnet run``` i terminalen.
 
 ## Syfte - YH-utbildning: Webbutvecklare .NET
-* Inlämningsuppgift i kursen Webbapplikation MVP - September 2021
-* Beskrivning: Inloggningssida med fokus JavaScript och localStorage.
+* Inlämningsuppgift i kursen Objektorienterad Programmering med C# - November 2021
+* Beskrivning: Utveckla en konsolapplikation för bolaget Multifabriken AB. De vill skapa en konsolapplikation för sina kunder där man kan välja att beställa nya produkter från deras fabrik. Fabriken kan producera bilar, godis, snören eller tofu. Via inmatning av beställning ska nya produkter skapas av den valda typen och samtliga produkter man beställt ska kunna listas av användaren.
 * Resultat: 100/100 (VG)
 
 ## Tekniker
-* HTML
-* Javascript tillsammans med localstorage
+* .NET Core
+* .NET Core CLI
+* OOP
+* C#
 
 ## Kravspecifikation
  |Krav|Uppfyllt|Egna Kommentarer|
