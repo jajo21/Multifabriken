@@ -1,4 +1,4 @@
-# Multifabriken
+# Multifabriken - November 2021
 ## Instruktioner för användning
 1. Ladda ner repot från https://github.com/jajo21/Multifabriken
 2. Leta upp valfri terminal och utgå från nerladdad mapp.
